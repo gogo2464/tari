@@ -1,0 +1,16 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - BB
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      
+      - name: repo owner
+        run: echo ${{ github.repository_owner }}
